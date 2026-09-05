@@ -1,0 +1,12 @@
+# Archivos personales y privados
+USER.md
+
+# Documentos locales de respaldo (Word y PDF institucionales)
+*.docx
+*.pdf
+
+# Archivos del sistema y temporales
+*.tmp
+*~
+.DS_Store
+Thumbs.db
