@@ -1,9 +1,8 @@
-# Evidencia 1: Control de Versiones con Git y Flujo con GitHub
+# Evidencia 1 — Primer repositorio con Git
 
-* **Participante:** Klever López
-* **Programa:** Preparación para Oportunidades CERN (2026) – ESPE
-* **Módulo:** Control de Versiones con Git
-* **Fecha:** 7 de septiembre de 2026
+* **Módulo:** [1.1 Git — Control de versiones](https://swcarpentry.github.io/git-novice/) | **Fecha:** 7 de septiembre de 2026
+
+> **Objetivo:** Crear un repositorio local, registrar un historial mínimo de tres commits, vincularlo a GitHub, realizar push a la rama principal y documentar los conceptos aprendidos, comandos clave y dificultades resueltas.
 
 ---
 

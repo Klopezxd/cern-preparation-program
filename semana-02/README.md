@@ -1,4 +1,4 @@
-# Semana 2 – Herramientas Fundamentales: Git, Linux y Python
+# Semana 2 — Herramientas Fundamentales
 
 * **Periodo:** 7 al 11 de septiembre de 2026
 * **Modalidad:** Trabajo autónomo (6 horas)
@@ -10,7 +10,7 @@
 
 | Fecha | Actividad | Recursos Oficiales | Entregable / Estado |
 | :--- | :--- | :--- | :---: |
-| **Lun 07/09** | Version Control with Git | [Software Carpentry – Git](https://swcarpentry.github.io/git-novice/) | [Evidencia 1](./evidencias/evidencia-01-git-version-control.md) |
+| **Lun 07/09** | Primer repositorio con Git | [1.1 Git — Control de versiones](https://swcarpentry.github.io/git-novice/) | [Evidencia 1](./evidencias/evidencia-01-git-version-control.md) |
 | **Mié 09/09** | Linux Básico y Terminal | [Software Carpentry – Unix Shell](https://swcarpentry.github.io/shell-novice/) | ⏳ Pendiente |
 | **Vie 11/09** | Python para Análisis de Datos | [Software Carpentry – Python](https://swcarpentry.github.io/python-novice-inflammation/) | ⏳ Pendiente |
 

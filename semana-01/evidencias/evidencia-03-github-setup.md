@@ -1,7 +1,8 @@
-# Evidencia 3: Configuración de Perfil y Repositorio en GitHub
+# Evidencia 3 — Perfil y repositorio GitHub
 
-* **Actividad:** 3.1 & 3.2 GitHub Profesional y Personalización de Perfil
-* **Participante:** Klever López (Ingeniería en TI - ESPE)
+* **Módulos:** [3.1 GitHub Skills — Introduction to GitHub](https://github.com/skills/introduction-to-github) y [3.2 Personaliza tu perfil](https://docs.github.com/en/account-and-profile/tutorials/personalize-your-profile) | **Fecha:** 4 de septiembre de 2026
+
+> **Objetivo:** Disponer de un perfil profesional de GitHub actualizado y estructurar el repositorio oficial del programa (`cern-preparation-program`) bajo una arquitectura modular y pública para documentar el avance semanal.
 
 ---
 

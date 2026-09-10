@@ -1,9 +1,8 @@
-# PROGRAMA DE PREPARACIÓN CERN - ESPE
+# Evidencia 2 — Exploración de un dataset CMS
 
-## Evidencia 2: Análisis del Dataset CMS Open Data
-* **Actividad:** 2.1 Finding & Using Open Data — Dataset Scouting
-* **Participante:** Klever López (Ingeniería en TI - ESPE)
-* **Recurso:** [Dataset Scouting Lesson](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-dataset-scouting/)
+* **Módulo:** [2.1 Finding & Using Open Data — Dataset Scouting](https://cms-opendata-workshop.github.io/workshopqcd-2024-lesson-dataset-scouting/) | **Fecha:** 2 de septiembre de 2026
+
+> **Objetivo:** Identificar y documentar un dataset de interés en el portal de CMS Open Data, analizando su identificador oficial, el tipo de información que almacena, su relevancia técnica, su posible utilidad y las dificultades de comprensión documental.
 
 ---
 

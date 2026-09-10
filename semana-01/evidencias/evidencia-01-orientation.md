@@ -1,9 +1,8 @@
-# PROGRAMA DE PREPARACIÓN CERN - ESPE
+# Evidencia 1 — CMS Open Data Orientation
 
-## Evidencia 1: CMS Open Data Orientation
-* **Actividad:** Orientación y Reconocimiento del Entorno
-* **Participante:** Klever López (Ingeniería en TI - ESPE)
-* **Recurso:** [ORIENTATION.html](https://cms-opendata-workshop.github.io/2024-07-29-CERN/ORIENTATION.html)
+* **Módulo:** [1.1 CMS Open Data Workshop 2024 — Orientation](https://cms-opendata-workshop.github.io/2024-07-29-CERN/ORIENTATION.html) | **Fecha:** 31 de agosto de 2026
+
+> **Objetivo:** Explorar la plataforma oficial de CMS Open Data e identificar la estructura organizativa del taller 2024, las herramientas tecnológicas involucradas, los componentes novedosos del entorno y posibles dificultades de navegación.
 
 ---
 
