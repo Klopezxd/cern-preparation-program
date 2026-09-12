@@ -1,58 +1,80 @@
-# Evidencia 3 — Fundamentos de Python para análisis de datos
+# Evidencia 3 — Primer análisis de datos con Python
 
 * **Módulo:** [3.1 Python — Fundamentos para análisis de datos](https://swcarpentry.github.io/python-novice-inflammation/) | **Fecha:** 11 de septiembre de 2026
 
-> **Objetivo:** Aplicar las librerías NumPy y Matplotlib para cargar, manipular y visualizar matrices de datos científicos bidimensionales, identificar anomalías estadísticas mediante programación defensiva, y automatizar el procesamiento por lotes de múltiples archivos mediante bucles y la librería `glob`.
+> **Objetivo:** Desarrollar un ejercicio completo de análisis de datos científicos utilizando Python, NumPy y Matplotlib, abarcando carga de datos, exploración matricial, cálculo de métricas estadísticas, generación de visualizaciones técnicas e interpretación fundamentada de resultados.
 
 ---
 
-## 1. Cuaderno de Trabajo y Recursos
+## 1. Carga de Datos
 
-* **Cuaderno interactivo:** [03-analisis-datos.ipynb](../ejercicios/03-analisis-datos.ipynb)
-* **Dataset clínico:** Archivos CSV en [`semana-02/ejercicios/data/`](../ejercicios/data/) (`inflammation-01.csv` a `inflammation-12.csv`).
-* **Librerías principales:** `numpy` (2.5.3), `matplotlib` (3.11.2).
-
----
-
-## 2. ¿Qué aprendí?
-
-### A. Diferencia estructural: Listas de Python vs. Arrays de NumPy
-Comprendí el modelo de memoria de NumPy frente a las listas tradicionales de Python. Mientras que una lista en Python almacena punteros dispersos a objetos independientes en memoria (lo que genera sobrecarga computacional y lentitud al iterar), un array de NumPy (`ndarray`) organiza los datos de forma homogénea en un bloque continuo de memoria RAM gestionado en lenguaje C. Esto permite la **vectorización**: ejecutar operaciones matemáticas masivas en paralelo sin requerir bucles `for` lentos.
-
-### B. Indexación y Rebanado 2D (Slicing)
-Asimilé la sintaxis matricial `matriz[filas, columnas]` y la convención de intervalos semiabiertos en Python (`inicio:fin`, donde el extremo superior queda excluido). Aprendí a extraer pacientes específicos (`data[10, :]`), días puntuales de todo el grupo (`data[:, 0]`) o bloques acotados de estudio (`data[0:3, 0:5]`).
-
-### C. La regla de colapso de los Ejes (`axis=0` vs `axis=1`)
-Consolidé el modelo mental de la agregación por ejes:
-* **`axis=0` (colapso vertical):** Aplasta las 60 filas de pacientes hacia abajo, generando un vector de **40 promedios diarios** (`np.mean(data, axis=0)`).
-* **`axis=1` (colapso horizontal):** Aplasta las 40 columnas de días de izquierda a derecha, produciendo un vector de **60 promedios por paciente** (`np.mean(data, axis=1)`).
-
-### D. Visualización de Ingeniería y Automatización
-Aprendí a no depender de gráficas por defecto: implementar cuadrículas explícitas (`grid`), calibrar pasos de ticks (`xticks`, `yticks`) y usar escalones (`step`) en lugar de interpolaciones diagonales (`plot`) para inspeccionar datos discretos. Finalmente, empaqueté el análisis en funciones reutilizables (`analizar` y `detectar_anomalias`) y sistematicé la lectura masiva de archivos con `glob.glob()`.
+Se utilizó el conjunto de datos tabular clínico provisto en el material oficial del workshop de **Software Carpentry**:
+* **Archivo:** `semana-02/ejercicios/data/inflammation-01.csv`
+* **Método de carga:** `np.loadtxt(fname='data/inflammation-01.csv', delimiter=',')`
+* **Estructura en memoria:** Almacenamiento continuo en un objeto `ndarray` de NumPy, garantizando eficiencia y operaciones vectorizadas en C.
 
 ---
 
-## 3. Hallazgos y Diagnóstico Forense de los Datos
+## 2. Exploración Inicial
 
-Al generar el panel triple de subplots (Promedio, Máximo y Mínimo diario) se identificaron anomalías críticas en los datasets del ensayo clínico:
-
-| Archivo | Comportamiento Observado | Diagnóstico Científico |
-| :--- | :--- | :--- |
-| **`inflammation-01.csv`** | Máximo lineal perfecto ($1, 2 \dots 20 \dots 0$) y mínimos en gradas exactas de 4 días. | **Datos sintéticos / simulados:** Las diferencias consecutivas (`np.diff`) son exactamente $1.0$ todos los días, demostrando una fórmula matemática artificial. |
-| **`inflammation-02.csv`** | Idéntica rampa triangular y escalones en el mínimo que el archivo 01. | **Datos duplicados / plantilla artificial.** |
-| **`inflammation-03.csv`** | Curva de máximos con ruido natural, pero mínimos en **cero absoluto constante** ($0.0$) durante los 40 días. | **Falla de instrumentación:** Presencia de pacientes no tratados o sensores averiados reportando ceros en cada jornada. |
-
----
-
-## 4. Función más Útil e Interesante
-
-La función más reveladora fue **`np.diff()`** combinada con `np.all()`. 
-
-Frente a la comprobación superficial del tutorial (`max[20] == 20`), que podría cumplirse por azar en una curva fluctuante, `np.diff()` calcula la derivada discreta (la tasa de cambio entre días adyacentes). Comprobar que `np.all(np.diff(max_diario[:21]) == 1.0)` permitió demostrar con rigor matemático que el ascenso era una línea recta perfecta con pendiente unitaria, confirmando de manera irrefutable el carácter artificial del dataset.
+Mediante inspección programática se obtuvieron las dimensiones y propiedades fundamentales del dataset:
+* **Dimensiones (`data.shape`):** `(60, 40)` $\rightarrow$ Representa **60 pacientes** (filas) evaluados durante **40 días consecutivos** (columnas).
+* **Tipo de dato interno (`data.dtype`):** `float64` (valores numéricos continuos de punto flotante de 64 bits).
+* **Inspección por Rebanado (Slicing 2D):**
+  * Primer registro (`data[0, 0]`): Valor `0.0`.
+  * Punto medio del estudio (`data[30, 20]`): Paciente 30 en el día 20 con inflamación moderada-alta.
+  * Muestra de bloque (`data[0:3, 0:5]`): Extracción de una submatriz de $3 \times 5$ correspondiente a los 3 primeros pacientes durante sus primeros 5 días.
 
 ---
 
-## 5. Dificultad Encontrada y Cómo se Resolvió
+## 3. Análisis Estadístico
 
-1. **Interpretación Geométrica de las Gradas:** Al observar la gráfica de mínimos de `inflammation-01.csv`, se percibía visualmente que los escalones medían 3 unidades a pesar de estar formados por 4 días con el mismo valor. Se resolvió identificando el "problema de los postes de la cerca" ($N$ puntos generan $N-1$ intervalos de distancia horizontal) y sustituyendo la interpolación lineal de `plt.plot()` por `plt.step()`, lo que renderizó escalones ortogonales exactos a 90 grados.
-2. **Vinculación del Intérprete en el IDE:** VS Code mantuvo en caché los entornos previos sin listar de inmediato el nuevo entorno virtual en su selector gráfico de Jupyter. Se resolvió configurando el intérprete en `.vscode/settings.json` y registrando el kernelspec formalmente mediante `python -m ipykernel install`.
+Se aplicaron agregaciones vectorizadas sobre las dos dimensiones mediante el parámetro `axis` (regla de colapso matricial):
+
+1. **Promedio Diario (`axis=0`):** Colapso vertical de los 60 pacientes para calcular el nivel medio de inflamación por día de tratamiento:
+   ```python
+   promedio_diario = np.mean(data, axis=0)  # Shape resultante: (40,)
+   ```
+2. **Máximo Diario (`axis=0`):** Detección del pico de inflamación diario en todo el grupo clínico:
+   ```python
+   maximo_diario = np.max(data, axis=0)  # Shape resultante: (40,)
+   ```
+3. **Mínimo Diario (`axis=0`):** Comportamiento basal o pacientes con menor inflamación diaria:
+   ```python
+   minimo_diario = np.min(data, axis=0)  # Shape resultante: (40,)
+   ```
+4. **Promedio Individual por Paciente (`axis=1`):** Colapso horizontal de los 40 días para cuantificar el impacto general en cada individuo:
+   ```python
+   promedio_pacientes = np.mean(data, axis=1)  # Shape resultante: (60,)
+   ```
+5. **Tasa de Cambio y Derivada Discreta (`np.diff`):** Medición de la pendiente entre días consecutivos para validar la naturaleza de las curvas.
+
+---
+
+## 4. Visualización Técnica
+
+Se implementaron dos enfoques visuales utilizando `matplotlib.pyplot`:
+
+1. **Mapa de Calor Bidimensional (`imshow`):** Permite inspeccionar los 2400 puntos de datos en una sola vista. Revela un incremento homogéneo de inflamación hacia el centro de la matriz (días 15 al 25).
+2. **Panel Múltiple de Subplots en Tríptico:** Visualización simultánea de tres métricas clave con cuadrículas auxiliares (`grid(True, linestyle='--')`), marcas de escala explícitas (`set_xticks`) y renderizado ortogonal en escalones (`step`):
+   * *Panel 1:* Curva de inflamación promedio (evolución temporal suave).
+   * *Panel 2:* Curva de inflamación máxima (rampa lineal).
+   * *Panel 3:* Curva de inflamación mínima (gradas discretas).
+
+---
+
+## 5. Interpretación de Resultados
+
+Del análisis exploratorio y visual se desprenden las siguientes conclusiones científicas:
+1. **Comportamiento Temporal:** La inflamación general evoluciona siguiendo una curva acampanada, con valores bajos al inicio (días 0–5), un pico generalizado alrededor del día 20 y un descenso gradual hacia el día 40.
+2. **Anomalía de Datos Sintéticos en `inflammation-01.csv`:**
+   * La curva de **máximos** forma una rampa lineal geométricamente exacta ($1, 2, 3 \dots 20$ y posterior descenso unitario). Al aplicar `np.diff()`, la tasa de cambio es idéntica a $1.0$ en todos los días de subida, lo cual no ocurre en biología real.
+   * La curva de **mínimos** asciende y desciende en **gradas fijas de 4 días** por escalón (efecto identificado y comprobado visualmente con `step`).
+   * *Diagnóstico:* El dataset fue generado sintéticamente mediante fórmulas programáticas discretas y no proviene de mediciones biológicas reales.
+
+---
+
+## 6. Cuaderno de Trabajo y Recursos Entregables
+
+* **Cuaderno Jupyter completo:** [03-analisis-datos.ipynb](../ejercicios/03-analisis-datos.ipynb)
+* **Repositorio en GitHub:** [Klopezxd/cern-preparation-program](https://github.com/Klopezxd/cern-preparation-program/tree/main/semana-02)
