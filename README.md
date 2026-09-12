@@ -32,7 +32,7 @@ Fortalecer competencias técnicas y prácticas en computación científica, proc
 | :---: | :--- | :---: | :---: |
 | **01** | Introducción a CMS Open Data y GitHub Profesional | ✅ Completado | [Semana 1](./semana-01/) |
 | **02** | Herramientas Fundamentales: Git, Linux y Python | ✅ Completado | [Semana 2](./semana-02/) |
-| **03** | Trabajo Científico: ROOT, NanoAOD y Docker Containers | ⏳ Pendiente | Próximamente |
+| **03** | Trabajo Científico: ROOT, NanoAOD y Docker Containers | 🟡 En desarrollo | [Semana 3](./semana-03/) |
 | **04** | Perfil Internacional y Open Source | ⏳ Pendiente | Próximamente |
 | **05** | CERN Application Workshop: CV y Motivación | ⏳ Pendiente | Próximamente |
 | **06** | Metodología de Investigación y Lectura de Papers | ⏳ Pendiente | Próximamente |
