@@ -18,5 +18,9 @@ __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
+# Configuraciones locales de editor
+.vscode/
+
 # Archivos de datos binarios ROOT
 *.root
+

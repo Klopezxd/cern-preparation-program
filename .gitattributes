@@ -1,0 +1,11 @@
+# Normalizacion automatica de saltos de linea multiplataforma (Windows / Linux)
+* text=auto eol=lf
+
+# Archivos binarios (preservar bytes exactos sin conversion de saltos de linea)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.docx binary
+*.root binary
+*.ico binary
