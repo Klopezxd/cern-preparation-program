@@ -10,7 +10,7 @@
 
 | Fecha | Tipo | Actividad | Recursos Oficiales | Entregable / Estado |
 | :--- | :---: | :--- | :--- | :---: |
-| **Lun 14/09** | Autónoma | ROOT y CMS NanoAOD | CMS Open Data Workshop 2024: Docker, ROOT, uproot & NanoAOD | 🟡 En desarrollo |
+| **Lun 14/09** | Autónoma | ROOT y CMS NanoAOD | CMS Open Data Workshop 2024: Docker, ROOT, uproot & NanoAOD | ✅ Completado |
 | **Mié 16/09** | Autónoma grupal | Trabajo colaborativo en Git | Software Carpentry (Collaborating & Conflicts), GitHub Skills (PR Review) | ⏳ Pendiente |
 | **Jue 17/09** | Presencial (Opcional) | Data Science & CERN Workshop | CMS Open Data Hackathon | ⏳ Opcional |
 | **Vie 18/09** | Autónoma | CV Técnico Internacional (Inglés) | Europass Curriculum Vitae | ⏳ Pendiente |
