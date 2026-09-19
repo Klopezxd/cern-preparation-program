@@ -11,7 +11,7 @@
 | Fecha | Tipo | Actividad | Recursos Oficiales | Entregable / Estado |
 | :--- | :---: | :--- | :--- | :---: |
 | **Lun 14/09** | Autónoma | ROOT y CMS NanoAOD | CMS Open Data Workshop 2024: Docker, ROOT, uproot & NanoAOD | ✅ Completado |
-| **Mié 16/09** | Autónoma grupal | Trabajo colaborativo en Git | Software Carpentry (Collaborating & Conflicts), GitHub Skills (PR Review) | ⏳ Pendiente |
+| **Mié 16/09** | Autónoma grupal | Trabajo colaborativo en Git | Software Carpentry (Collaborating & Conflicts), GitHub Skills (PR Review) | ✅ Completado |
 | **Jue 17/09** | Presencial (Opcional) | Data Science & CERN Workshop | CMS Open Data Hackathon | ⏳ Opcional |
 | **Vie 18/09** | Autónoma | CV Técnico Internacional (Inglés) | Europass Curriculum Vitae | ⏳ Pendiente |
 
@@ -19,5 +19,7 @@
 
 ## 📂 Contenido del Directorio
 
-* [📁 evidencias/](./evidencias/): Reportes técnicos, entregables formales para Moodle y documentación de actividades.
+* [📁 evidencias/](./evidencias/): Reportes técnicos y entregables formales para Moodle:
+  * [Evidencia 1 — Exploración de ROOT y CMS NanoAOD](./evidencias/evidencia-01-root-nanoaod.md)
+  * [Evidencia 2 — Trabajo Colaborativo en GitHub](./evidencias/evidencia-02-git-colaborativo.md)
 * [📁 ejercicios/](./ejercicios/): Cuadernos de análisis interactivo (Jupyter), scripts de procesamiento de datos y ejercicios prácticos.
