@@ -10,9 +10,9 @@
 
 | Fecha | Tipo | Actividad | Recursos Oficiales | Entregable / Estado |
 | :--- | :---: | :--- | :--- | :---: |
-| **Lun 21/09** | Guiada | ¿Cómo postular al CERN Summer Student Programme? | [CERN Summer Studentship](https://careers.cern/summer) | 🟡 En desarrollo |
+| **Lun 21/09** | Guiada | ¿Cómo postular al CERN Summer Student Programme? | [CERN Summer Studentship](https://careers.cern/summer) | ⏳ Pendiente (postergada por coordinación) |
 | **Mié 23/09** | Autónoma | Open Source y GitHub | [First Contributions](https://firstcontributions.github.io/), [Open Source Guides](https://opensource.guide/how-to-contribute/) | ✅ Completado |
-| **Vie 25/09** | Autónoma | LinkedIn y Marca Personal | Guías profesionales de LinkedIn para perfiles tech | ⏳ Pendiente |
+| **Vie 25/09** | Autónoma | LinkedIn y Marca Personal | Guías profesionales de LinkedIn para perfiles tech | ✅ Completado |
 
 ---
 
@@ -20,4 +20,5 @@
 
 * [📁 evidencias/](./evidencias/): Reportes técnicos, reflexiones de postulación, enlaces a Pull Requests y entregables formales:
   * [Evidencia 1 — Primera Contribución Open Source](./evidencias/evidencia-01-primera-contribucion-open-source.md)
+  * [Evidencia 2 — Perfil Profesional en LinkedIn](./evidencias/evidencia-02-perfil-profesional-linkedin.md)
 * [📁 ejercicios/](./ejercicios/): Prácticas de contribución a repositorios abiertos, borradores de perfil y recursos de apoyo.
