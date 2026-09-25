@@ -34,7 +34,7 @@ Fortalecer competencias técnicas y prácticas en computación científica, proc
 | **02** | Herramientas Fundamentales: Git, Linux y Python | ✅ Completado | [Semana 2](./semana-02/) |
 | **03** | Trabajo Científico: ROOT, NanoAOD y Docker Containers | ✅ Completado | [Semana 3](./semana-03/) |
 | **04** | Perfil Internacional y Open Source | ✅ Completado | [Semana 4](./semana-04/) |
-| **05** | CERN Application Workshop: CV y Motivación | ⏳ Pendiente | Próximamente |
+| **05** | CERN Application Workshop: CV y Motivación | 🟡 En desarrollo | [Semana 5](./semana-05/) |
 | **06** | Metodología de Investigación y Lectura de Papers | ⏳ Pendiente | Próximamente |
 | **07** | Sprint Técnico y Gestión Ágil de Proyectos | ⏳ Pendiente | Próximamente |
 | **08** | Definición y Arquitectura de Proyectos Grupales | ⏳ Pendiente | Próximamente |
