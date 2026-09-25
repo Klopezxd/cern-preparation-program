@@ -9,3 +9,6 @@
 *.docx binary
 *.root binary
 *.ico binary
+
+# GitHub Linguist: excluir graficos base64 de las estadisticas de lenguajes del repo/perfil
+*.ipynb linguist-documentation=true
