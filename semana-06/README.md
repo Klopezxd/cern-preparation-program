@@ -9,10 +9,10 @@
 ## 📋 Resumen de Actividades
 
 | Fecha | Tipo | Actividad | Recursos Oficiales | Entregable / Estado |
-| :--- | :---: | :--- | :--- | :---: |
-| **Lun 05/10** | Guiada | Metodología IMRyD y Análisis de Papers | Repositorio CERN CDS & arXiv | ⏳ Pendiente |
-| **Mié 07/10** | Autónoma | Lectura Crítica de un Paper de CMS | Publicaciones oficiales CMS Open Data | ⏳ Pendiente |
-| **Vie 09/10** | Autónoma | Reporte de Metodología y Reproducibilidad | Guías de investigación institucional ESPE | ⏳ Pendiente |
+| :--- | :---: | :--- | :--- | :--- | :---: |
+| **Lun 05/10** | Autónoma | Introducción a la Investigación y Delimitación | Elsevier Researcher Academy | ✅ [Evidencia 1](./evidencias/evidencia-01-introduccion-investigacion-tema.md) |
+| **Mié 07/10** | Autónoma | Lectura Crítica de un Paper (3 Pasadas) | S. Keshav / WhisperX Paper | ✅ [Evidencia 2](./evidencias/evidencia-02-analisis-paper-whisperx.md) |
+| **Vie 09/10** | Guiada | Mentoría Técnica y Metodología | Sesión académica con Ing. Tatiana Gualotuña | ✅ Completado |
 
 ---
 
