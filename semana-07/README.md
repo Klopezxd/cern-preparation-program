@@ -10,10 +10,10 @@
 
 | Fecha | Tipo | Actividad | Recursos Oficiales | Entregable / Estado |
 | :--- | :---: | :--- | :--- | :--- | :---: |
-| **Lun 12/10** | Autónoma | Gestión y Planificación de Proyectos | Atlassian Learn Agile & Project Roadmap | ⏳ Pendiente |
-| **Mié 14/10** | Autónoma | Trabajo Autónomo Supervisado | Resolución de incidencias y evidencias | ⏳ Pendiente |
+| **Lun 12/10** | Autónoma | Gestión y Planificación de Proyectos | Atlassian Learn Agile & Project Roadmap | ✅ [Evidencia 1](./evidencias/evidencia-01-planificacion-proyecto-tecnologico.md) |
+| **Mié 14/10** | Autónoma | Trabajo Autónomo Supervisado | Resolución de incidencias y evidencias | ✅ [Evidencia 2](./evidencias/evidencia-02-registro-incidencias-tecnicas.md) |
 | **Jue 15/10** | Opcional | CERN Technical Challenge (Presencial) | CMS Open Data Hackathon | ⏳ Opcional |
-| **Vie 16/10** | Autónoma | Introducción al Desarrollo de Proyectos | CMS Open Data & GitHub Review PRs | ⏳ Pendiente |
+| **Vie 16/10** | Autónoma | Introducción al Desarrollo de Proyectos | CMS Open Data & GitHub Review PRs | ✅ [Evidencia 3](./evidencias/evidencia-03-analisis-estructura-proyecto-tecnico.md) |
 
 ---
 

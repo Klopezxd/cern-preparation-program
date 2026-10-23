@@ -36,10 +36,15 @@ Fortalecer competencias técnicas y prácticas en computación científica, proc
 | **04** | Perfil Internacional y Open Source | ✅ Completado | [Semana 4](./semana-04/) |
 | **05** | CERN Application Workshop: CV y Motivación | ✅ Completado | [Semana 5](./semana-05/) |
 | **06** | Metodología de Investigación y Lectura de Papers | ✅ Completado | [Semana 6](./semana-06/) |
-| **07** | Sprint Técnico y Gestión Ágil de Proyectos | 🟡 En desarrollo | [Semana 7](./semana-07/) |
-| **08** | Definición y Arquitectura de Proyectos Grupales | ⏳ Pendiente | Próximamente |
+| **07** | Sprint Técnico y Gestión Ágil de Proyectos | ✅ Completado | [Semana 7](./semana-07/) |
+| **08** | Definición y Arquitectura de Proyectos Grupales | 🟡 En desarrollo | [Semana 8](./semana-08/) |
 | **09** | Revisión Técnica, Mentoría y Retroalimentación | ⏳ Pendiente | Próximamente |
 | **10** | Presentación Final y Cierre del Programa | ⏳ Pendiente | Próximamente |
+
+---
+
+## 📚 Recursos y Guías Estratégicas
+* [📁 recursos/postulacion-cern/](./recursos/postulacion-cern/): **Guía Estratégica Operativa para la Postulación al CERN Summer Student Programme & OpenLab**, cronograma oficial 2026-2027, desglose financiero de viáticos, criterios de *matching* y materiales de soporte institucional ESPE.
 
 ---
 
